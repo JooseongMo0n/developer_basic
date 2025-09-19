@@ -6,7 +6,7 @@
   내 컴퓨터에서 코드나 파일의 변경 이력을 추적∙관리할 수 있다.
 
 - GitHub: Git 저장소를 온라인(Cloud)에서 관리하고 협력할 수 있게 해주는 서비스(Platform)이다.<br>
-  Git을 다른 사람과 공유함으로써, 협력시 사용할 수 있다.
+  local repository에 있는 project를 cloud에 저장하고, project 을 다른 사람과 공유함으로써 협력시 사용할 수 있다.
 
 <br>
 
@@ -29,6 +29,25 @@
     - bad commit: 로그인, 오타 수정, 네트워크 설정 파일이 섞임
 
 ### git 활용하기
+
+- `git status` (상태 확인)
+
+  - 현재 작업 폴더의 상태와 Staging Area의 상태를 보여준다.
+  - 어떤 파일이 수정∙추가∙Commit 되었는지 등을 한눈에 확인할 수 있다.
+
+- `git log` (이력 확인)
+  - 지금까지 생성된 모든 commit 목록을 시간 순서대로 보여준다.
+  - 각 commit의 작성자, 날짜, commit message 등을 확인할 수 있다.
+- `git diff` (변경 내용 비교)
+  - 두 commit 사이, 또는 작업 폴더와 commit 사이의 변경 내용을 비교하여 어떤 코드가 추가되고 삭제되었는지 상세히 보여준다.
+  - `git diff`: 수정은 했지만 아직 `add`하지 않은 파일의 변경 내용을 보여준다.
+  - `git diff --staged`: `add`는 했지만 아직 commit하지 않은 파일의 변경 내용을 보여준다.
+- `git restore` 또는 `git checkout`
+  - 작업 중인 파일을 이전 상태로 되돌린다.
+  - `git restore <file name>`: 수정 사항을 취소하고 파일의 원래 내용으로 되돌린다.
+  - `git restore --staged <file name>`: staging area에 있는 파일을 staging 전 상태로 되돌린다.
+- `git reset` (commit)
+  - commit 자체를 되돌리는 강력한 기능이다. 가장 최근 commit을 취소하거나, 특정 commit 시점으로 project 전체를 되돌릴 수 있다.
 
 <br>
 
