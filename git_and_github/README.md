@@ -127,6 +127,10 @@ Local Repository와 Remote Repository 연결
 - remote repository의 최신 변경 내용을 내 컴퓨터로 다운로드 한다.
 - `git pull origin main` origin repository의 main branch에 있는 최신 코드를 가져온다.
 
+5. git clone (project 폴더 가져오기)
+
+- 새로운 project에 참여하거나, 다른 사람이 이미 만들어 놓은 project를 local computer에 다운로드할 때 가장 먼저
+
 <br>
 
-## 5. 협업하기 (branch & clone)
+## 5. 협업하기
