@@ -10,7 +10,9 @@ local repository에 있는 project를 cloud에 저장하고, project 을 다른 
 
 <br>
 
-## 2. Git 사용법(Local)
+<!--  -->
+
+## 2. Git 기초 사용법(Local)
 
 ### git 시작하기
 
@@ -59,52 +61,55 @@ local repository에 있는 project를 cloud에 저장하고, project 을 다른 
 - `git reset` (commit)
   - commit 자체를 되돌리는 강력한 기능이다. 가장 최근 commit을 취소하거나, 특정 commit 시점으로 project 전체를 되돌릴 수 있다.
 
-### 독립적인 작업 흐름 (branch)
+<br>
+
+<!--  -->
+
+## 3. 독립적인 작업 흐름 (branch)
 
 **branch:** 특정 commit을 가리키는 가벼운 이동 포인터로, 독립적인 개발 흐름을 관리하기 위한 기능이다. <br>
 
-#### branch 생성 및 이동
+- branch 생성 및 이동
 
-- `git checkout -b <branch_name>` (새로운 branch 생성)
+  - `git checkout -b <branch_name>` (새로운 branch 생성)
 
-  - 새로운 branch를 만들고, 해당 branch로 이동한다.
-  - 예: `git checkout -b feature/login`
+    - 새로운 branch를 만들고, 해당 branch로 이동한다.
+    - 예: `git checkout -b feature/login`
 
-- `git branch` (branch 목록)
+  - `git branch` (branch 목록)
 
-  - local에 존재하는 branch 목록을 보여주고, 현재 내가 위치한 branch에는 별표(\*)를 표시한다.
+    - local에 존재하는 branch 목록을 보여주고, 현재 내가 위치한 branch에는 별표(\*)를 표시한다.
 
-- `git checkout <existing_branch>`
-  - 이미 존재하는 다른 branch로 이동할 때 사용한다.
-  - 예: `git checkout main`
-
-<br>
-
-#### branch 동기화 및 merge
-
-- `git push origin <branch_name>`
-
-  - 작업한 local branch를 GitHub에 업로드한다.
-  - 예: `git push origin feature/login`
-
-- `git pull origin <branch_name>`
-
-  - GitHub에 있는 branch의 최신 변경 내용을 local로 가져온다.
-
-- `git merge <branch_name>`
-  - 현재 위치한 branch에 다른 branch의 변경 내용을 합친다.
-  - 예: main 브랜치 이동 후, `git merge feature/login`을 실행하면 feature/login의 변경 내용이 main에 합쳐진다.
-
-#### branch 삭제
-
-- `git branch -d <branch_name>`
-  - local branch를 삭제한다.
-  - d는 'delete'의 약자로, merge가 완료된 branch만 안전하게 삭제한다.
-  - 예: `git branch -d feature/login`
+  - `git checkout <existing_branch>`
+    - 이미 존재하는 다른 branch로 이동할 때 사용한다.
+    - 예: `git checkout main`
 
 <br>
 
-## 3. GitHub와 Git 연동하기
+- branch 동기화 및 merge
+
+  - `git push origin <branch_name>`
+
+    - 작업한 local branch를 GitHub에 업로드한다.
+    - 예: `git push origin feature/login`
+
+  - `git pull origin <branch_name>`
+
+    - GitHub에 있는 branch의 최신 변경 내용을 local로 가져온다.
+
+  - `git merge <branch_name>`
+    - 현재 위치한 branch에 다른 branch의 변경 내용을 합친다.
+    - 예: main 브랜치 이동 후, `git merge feature/login`을 실행하면 feature/login의 변경 내용이 main에 합쳐진다.
+
+- branch 삭제
+  - `git branch -d <branch_name>`
+    - local branch를 삭제한다.
+    - d는 'delete'의 약자로, merge가 완료된 branch만 안전하게 삭제한다.
+    - 예: `git branch -d feature/login`
+
+<br>
+
+## 4. GitHub와 Git 연동하기
 
 - Local Repository와 Remote Repository 연결
 
@@ -122,4 +127,4 @@ local repository에 있는 project를 cloud에 저장하고, project 을 다른 
 
 <br>
 
-## 4. 협업하기 (branch & clone)
+## 5. 협업하기 (branch & clone)
