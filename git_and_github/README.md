@@ -34,6 +34,8 @@ local repository에 있는 project를 cloud에 저장하고, project 을 다른 
     - good commit: 로그인 기능 개발 관련 파일들만 모아 commit, 오타 수정 관련 파일들만 모아 commit
     - bad commit: 로그인, 오타 수정, 네트워크 설정 파일이 섞임
 
+<br>
+
 ### git 활용하기
 
 - `git status` (상태 확인)
@@ -52,7 +54,7 @@ local repository에 있는 project를 cloud에 저장하고, project 을 다른 
   - `git diff`: 수정은 했지만 아직 `add`하지 않은 파일의 변경 내용을 보여준다.
   - `git diff --staged`: `add`는 했지만 아직 commit하지 않은 파일의 변경 내용을 보여준다.
 
-- `git restore` 또는 `git checkout`
+- `git restore`
 
   - 작업 중인 파일을 이전 상태로 되돌린다.
   - `git restore <file name>`: 수정 사항을 취소하고 파일의 원래 내용으로 되돌린다.
@@ -84,8 +86,6 @@ local repository에 있는 project를 cloud에 저장하고, project 을 다른 
     - 이미 존재하는 다른 branch로 이동할 때 사용한다.
     - 예: `git checkout main`
 
-<br>
-
 - branch 동기화 및 merge
 
   - `git push origin <branch_name>`
@@ -111,19 +111,21 @@ local repository에 있는 project를 cloud에 저장하고, project 을 다른 
 
 ## 4. GitHub와 Git 연동하기
 
-- Local Repository와 Remote Repository 연결
+Local Repository와 Remote Repository 연결
 
-  - GitHub에 new repository를 만들고 주소를 복사한다.
-  - `git remote add origin <GitHub 저장소 주소>` 명령어를 입력하여 local repository의 별명(origin)을 등록하여 연결한다.
+1. GitHub에 new repository를 만들고 주소를 복사한다.
 
-  - git push (코드 올리기)
+2. `git remote add origin <GitHub 저장소 주소>` 명령어를 입력하여 local repository의 별명(origin)을 등록하여 연결한다.
 
-    - local repository의 commit된 내용을 remote repository (GitHub)로 업로드한다.
-    - `git push origin main` 명령어를 통해 origin repository의 main branch로 코드를 보낸다.
+3. git push (코드 올리기)
 
-  - git pull (코드 가져오기)
-    - remote repository의 최신 변경 내용을 내 컴퓨터로 다운로드 한다.
-    - `git pull origin main` origin repository의 main branch에 있는 최신 코드를 가져온다.
+- local repository의 commit된 내용을 remote repository (GitHub)로 업로드한다.
+- `git push origin main` 명령어를 통해 origin repository의 main branch로 코드를 보낸다.
+
+4. git pull (코드 가져오기)
+
+- remote repository의 최신 변경 내용을 내 컴퓨터로 다운로드 한다.
+- `git pull origin main` origin repository의 main branch에 있는 최신 코드를 가져온다.
 
 <br>
 
