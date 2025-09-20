@@ -109,6 +109,8 @@ local repository에 있는 project를 cloud에 저장하고, project 을 다른 
 
 <br>
 
+<!--  -->
+
 ## 4. GitHub와 Git 연동하기
 
 Local Repository와 Remote Repository 연결
@@ -140,6 +142,8 @@ Local Repository와 Remote Repository 연결
 
 <br>
 
+<!--  -->
+
 ## 5. 협업하기
 
 - main branch 최신화: 협업하여 project를 진행하는 경우 main branch를 최신화하여(pull) 개발을 시작한다.
@@ -148,9 +152,16 @@ Local Repository와 Remote Repository 연결
   - 1. branch 생성(local)
   - 2. code 작성 및 commit(local)
   - 3. remote branch 최신화(remote -> local)
+
+    - 협업 환경에서는 다른 사람이 main이나 develop을 update했을 수 있기 때문에, push 전 pull하여 최신화를 맞추는 게 안전함.
+    - 다만 여기서 바로 git pull을 쓰면 충돌이 나기 쉬워 보통은 rebase를 많이 사용한다.
+    - `git fetch origin`
+    - `git rebase origin/develop`
+    - (만약 여기서 충돌이 나면 해결 후 `git rebase --continue`)
+
   - 4. remote repo(GitHub)에 Push(local -> remote)
   - 5. Pull Request (PR) 생성
+    - 팀 내 경험이 많은 개발자가 PR의 code를 검토 후 main branch와 merge한다.
+    - 독립 branch를 main branch에 merge하면, local과 remote에 있는 독립 branch를 삭제한다.
 
-- 협업 시, 여러 사람이 동시에 같은 파일에 대해 수정할 수 있다. 이때 각 사람이 push를 하려고 하면 문제가 발생한다.<br>
-  따라서 push하기 전, `git pull origin
-  업데이트 예정...
+업데이트 예정...
