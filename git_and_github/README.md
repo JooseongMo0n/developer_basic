@@ -117,6 +117,10 @@ Local Repository와 Remote Repository 연결
 
 2. `git remote add origin <GitHub 저장소 주소>` 명령어를 입력하여 local repository의 별명(origin)을 등록하여 연결한다.
 
+- `origin`은 remote repository를 가리키는 별명이다. local repo에 remote repo를 등록할 때, default 이름으로 orgin이 붙는다.
+- 예를 들어, `git clone https://github.com/user/project.git` 명령어를 입력하면 remote repo 주소인 `https://github.com/user/project.git`이 `origin`으로 등록된다.
+- 매번 긴 URL을 사용하는 대신 간단한 이름으로 참조하기 위해 사용한다.
+
 3. git push (코드 올리기)
 
 - local repository의 commit된 내용을 remote repository (GitHub)로 업로드한다.
@@ -126,13 +130,27 @@ Local Repository와 Remote Repository 연결
 
 - remote repository의 최신 변경 내용을 내 컴퓨터로 다운로드 한다.
 - `git pull origin main` origin repository의 main branch에 있는 최신 코드를 가져온다.
+- local에 있는 project를 최신화할 때 사용한다.
+- project를 진행하며 수시로 실행하게 된다.
 
 5. git clone (project 폴더 가져오기)
 
-- 새로운 project에 참여하거나, 다른 사람이 이미 만들어 놓은 project를 local computer에 다운로드할 때 가장 먼저
+- 새로운 project에 참여하거나, 다른 사람이 이미 만들어 놓은 project를 local computer에 다운로드할 때 가장 먼저 수행한다.
+- project를 진행하며 한 번만 실행하게 된다.
 
 <br>
 
 ## 5. 협업하기
 
-업데이트 예정...
+- main branch 최신화: 협업하여 project를 진행하는 경우 main branch를 최신화하여(pull) 개발을 시작한다.
+- 독립된 branch 사용: project를 진행하며 맡은 기능을 개발할 때, main에서 개발하는 것이 아닌 별도의 branch를 생성해 개발한다.
+
+  - 1. branch 생성(local)
+  - 2. code 작성 및 commit(local)
+  - 3. remote branch 최신화(remote -> local)
+  - 4. remote repo(GitHub)에 Push(local -> remote)
+  - 5. Pull Request (PR) 생성
+
+- 협업 시, 여러 사람이 동시에 같은 파일에 대해 수정할 수 있다. 이때 각 사람이 push를 하려고 하면 문제가 발생한다.<br>
+  따라서 push하기 전, `git pull origin
+  업데이트 예정...
